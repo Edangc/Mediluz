@@ -12,6 +12,11 @@ public class Electrodomestico {
         this.kilowattHora = kilowattHora;
     }
 
+    Electrodomestico() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+
     public String getNombreElectroomestico() {
         return nombreElectroomestico;
     }
