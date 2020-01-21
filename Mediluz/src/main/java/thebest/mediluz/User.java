@@ -34,7 +34,7 @@ public class User {
     }
     
     public void cargarUsuario() throws IOException{
-        File archivo = new File ("C:\\nombreDeUsuario.txt");
+        File archivo = new File ("src\\bd\\nameUser.txt");
         FileReader fr = new FileReader(archivo);
         BufferedReader br = new BufferedReader(fr);
         nameUser = br.readLine();

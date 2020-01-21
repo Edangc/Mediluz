@@ -29,7 +29,7 @@ public class ListaGastoMensual {
     }
     
     public void cargarInfoGastoMensual() throws FileNotFoundException{
-        File archivo = new File("C:\\gastoMensual.txt");
+        File archivo = new File("src\\bd\\gastoMensual.txt");
         FileReader fr = new FileReader(archivo);
         BufferedReader br = new BufferedReader(fr);
         

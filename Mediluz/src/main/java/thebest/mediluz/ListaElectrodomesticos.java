@@ -28,7 +28,7 @@ public class ListaElectrodomesticos {
     
     public void cargarListaElectrodomesticos() throws FileNotFoundException{
                
-        File archivo = new File ("C:\\electrodomesticos.txt");
+        File archivo = new File ("src\\bd\\electrodomesticos.txt");
         FileReader fr = new FileReader(archivo);
         BufferedReader br = new BufferedReader(fr);
         
