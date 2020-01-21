@@ -15,6 +15,7 @@ public class ListaElectrodomesticos {
     }
 
     public ListaElectrodomesticos(){
+        listaElectrodomestico = new LinkedList<Electrodomestico>();
     }
 
     public LinkedList<Electrodomestico> getListaElectrodomestico() {
@@ -61,6 +62,16 @@ public class ListaElectrodomesticos {
             }
         }
         
+    }
+    
+    public void verMes(){
+        
+        for(int i = 0;this.listaElectrodomestico.get(i)!=this.listaElectrodomestico.getLast();i++){
+        
+            Electrodomestico pos = this.listaElectrodomestico.get(i);
+            System.out.println("Nombre: "+pos.getNombreElectrodomestico()+" Gasto: "+pos.getKilowattHora());
+        
+        }
     }
     
     public void agregarElectrodomestico(){

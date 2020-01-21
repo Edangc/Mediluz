@@ -24,8 +24,8 @@ public class Main {
         while(true){
             System.out.println("Ingrese opción a tratar");
             System.out.println("1.-Agregar mes");
-            System.out.println("2.-Visualizar lista de electrodomesticos");
-            System.out.println("4.-Salir");
+            System.out.println("2.-Visualizar mes");
+            System.out.println("3.-Salir");
             option = lector.nextInt();
             if(option == 4){
                 break;
@@ -34,6 +34,9 @@ public class Main {
             
                 case 1:
                     actual.agregarMes();
+                    break;
+                case 2:
+                    actual.verMes();
                     break;
                 default:
                     System.out.println("Ingrese opcion valida");

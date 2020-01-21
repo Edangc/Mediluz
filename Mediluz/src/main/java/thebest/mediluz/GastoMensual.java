@@ -9,6 +9,7 @@ public class GastoMensual {
     private String fecha;
 
     public GastoMensual(){
+        electronicosMensuales = new ListaElectrodomesticos();
     }
     
     public GastoMensual(ListaElectrodomesticos electronicosMensuales, int gastoTotalDelMes, String fecha) {
@@ -51,6 +52,7 @@ public class GastoMensual {
     public void agregarElectrodomesticos(){
         Scanner lector = new Scanner(System.in);
         Scanner lector2 = new Scanner(System.in);
+        LinkedList lista = (LinkedList)this.electronicosMensuales.getListaElectrodomestico();
         int i = 0;
         int option;
         int horas = 0;
@@ -74,6 +76,7 @@ public class GastoMensual {
                     System.out.println("Ingrese horas usadas en el mes");
                     horas = lector.nextInt();
                     this.gastoTotalDelMes = this.gastoTotalDelMes + (horas*nuevo.getKilowattHora());
+                    lista.add(nuevo);
                     i++;
                     break;
                 default:
@@ -81,6 +84,10 @@ public class GastoMensual {
                     break;
             }
         }
+    }
+    
+    public void verMes(){
+        this.electronicosMensuales.verMes();
     }
     
     public void calculoGasto(){

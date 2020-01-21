@@ -17,7 +17,7 @@ public class ListaGastoMensual {
 
     public ListaGastoMensual() {
         
-        listaGastoMensual = new LinkedList();
+        listaGastoMensual = new LinkedList<GastoMensual>();
     }
     
     public LinkedList<GastoMensual> getListaGastoMensual() {

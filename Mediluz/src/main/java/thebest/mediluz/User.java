@@ -53,7 +53,20 @@ public class User {
         nuevo.setFecha(lector.nextLine());
         nuevo.agregarElectrodomesticos();
         nuevo.calculoGasto();
-        LinkedList<GastoMensual> Gasto = listaGastoMensual.getListaGastoMensual();
-        Gasto.add(nuevo);
+        LinkedList<GastoMensual> gasto = listaGastoMensual.getListaGastoMensual();
+        gasto.add(nuevo);
+    }
+    public void verMes(){
+        System.out.println("Ingrese mes a buscar");
+        Scanner lector = new Scanner(System.in);
+        System.out.println("hola");
+        String cadena = lector.nextLine();
+        LinkedList<GastoMensual> gasto = listaGastoMensual.getListaGastoMensual();
+        for(int i = 0;gasto.get(i)!=gasto.getLast();i++){
+            
+            if(gasto.get(i).getFecha().equalsIgnoreCase(cadena)){
+                
+            }
+        }
     }
 }
