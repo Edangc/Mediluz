@@ -2,9 +2,12 @@
 package thebest.mediluz;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import static java.lang.Integer.parseInt;
 import java.util.LinkedList;
 
@@ -20,12 +23,13 @@ public class ListaGastoMensual {
         listaGastoMensual = new LinkedList<GastoMensual>();
     }
     
+    
     public LinkedList<GastoMensual> getListaGastoMensual() {
         return listaGastoMensual;
     }
     
     public void cargarInfoGastoMensual() throws FileNotFoundException{
-        File archivo = new File ("C:\\gastoMensual.txt");
+        File archivo = new File("C:\\gastoMensual.txt");
         FileReader fr = new FileReader(archivo);
         BufferedReader br = new BufferedReader(fr);
         
@@ -72,6 +76,38 @@ public class ListaGastoMensual {
             }
         }
     }
-
     
+    public void guardarDatos() throws IOException{
+        File archivo = new File("C:\\electrodomesticos.txt");
+        FileWriter fw = new FileWriter(archivo);
+        BufferedWriter bw = new BufferedWriter(fw);
+        
+        bw.write("");
+        /*Atributos ListaGastoMensual:
+        private ListaElectrodomesticos electronicosMensuales;
+        private int gastoTotalDelMes;
+        private String fecha;*/
+        
+        
+        for(int i = 0;i<listaGastoMensual.size();i++){
+            GastoMensual mes = listaGastoMensual.get(i);
+            
+            String cadena = mes.getFecha()+","+mes.getGastoTotalDelMes()+","; 
+            
+            ListaElectrodomesticos listElectrodomesticos = mes.getElectronicosMensuales();
+            LinkedList<Electrodomestico> electrodomesticos = listElectrodomesticos.getListaElectrodomestico();
+            
+            for(int j=0; i< electrodomesticos.size() ;j++){
+                cadena += electrodomesticos.get(j).getNombreElectrodomestico();
+                cadena += ",";
+                cadena += electrodomesticos.get(j).getKilowattHora();
+                if( j != electrodomesticos.size()-1 ){
+                    cadena += ","; 
+                }
+                bw.write(cadena+'\n');
+            }
+        }
+        
+        bw.close();
+    }    
 }

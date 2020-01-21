@@ -69,4 +69,8 @@ public class User {
             }
         }
     }
+    
+    public void guardarDatos() throws IOException{
+        listaGastoMensual.guardarDatos();
+    }
 }

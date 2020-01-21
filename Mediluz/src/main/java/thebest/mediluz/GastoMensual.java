@@ -94,4 +94,5 @@ public class GastoMensual {
     public void calculoGasto(){
         this.gastoTotalDelMes = this.gastoTotalDelMes*144;
     }
+    
 }

@@ -78,4 +78,6 @@ public class ListaElectrodomesticos {
         System.out.println("Ingrese el electrodomestico");
         nuevo.setNombreElectrodomestico(lector.nextLine());
     }
+    
+    
 }
