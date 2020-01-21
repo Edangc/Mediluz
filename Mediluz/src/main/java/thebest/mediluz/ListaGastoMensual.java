@@ -9,16 +9,17 @@ import static java.lang.Integer.parseInt;
 import java.util.LinkedList;
 
 public class ListaGastoMensual {
-    private final LinkedList<GastoMensual> listaGastoMensual;
+    private LinkedList<GastoMensual> listaGastoMensual;
 
     public ListaGastoMensual(LinkedList<GastoMensual> listaGastoMensual) {
         this.listaGastoMensual = listaGastoMensual;
     }
 
-    ListaGastoMensual() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public ListaGastoMensual() {
+        
+        listaGastoMensual = new LinkedList();
     }
-
+    
     public LinkedList<GastoMensual> getListaGastoMensual() {
         return listaGastoMensual;
     }
@@ -72,8 +73,5 @@ public class ListaGastoMensual {
         }
     }
 
-    private ListaElectrodomesticos ListaElectrodomesticos() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     
 }

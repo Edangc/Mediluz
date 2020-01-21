@@ -19,16 +19,24 @@ public class Main {
         User actual = new User();
         Scanner lector = new Scanner(System.in);
         System.out.println("Ingrese su nombre");
+        int option = 0;
         actual.setNameUser(lector.nextLine());
         while(true){
             System.out.println("Ingrese opción a tratar");
             System.out.println("1.-Agregar mes");
             System.out.println("2.-Visualizar lista de electrodomesticos");
-            System.out.println("3.-Calculo de gasto del mes");
             System.out.println("4.-Salir");
-            switch(i){
+            option = lector.nextInt();
+            if(option == 4){
+                break;
+            }
+            switch(option){
             
-                case 1: 
+                case 1:
+                    actual.agregarMes();
+                    break;
+                default:
+                    System.out.println("Ingrese opcion valida");
             }
         }
     }

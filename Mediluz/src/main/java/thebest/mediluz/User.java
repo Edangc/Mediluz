@@ -13,11 +13,9 @@ public class User {
         this.nameUser = nameUser;
     }
 
-    User() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public User() {
+        listaGastoMensual = new ListaGastoMensual();
     }
-
-
 
     public ListaGastoMensual getListaGastoMensual() {
         return listaGastoMensual;
@@ -49,10 +47,13 @@ public class User {
     }
     
     public void agregarMes(){
+        Scanner lector = new Scanner(System.in);
         GastoMensual nuevo = new GastoMensual();
+        System.out.println("Ingrese mes");
+        nuevo.setFecha(lector.nextLine());
         nuevo.agregarElectrodomesticos();
         nuevo.calculoGasto();
-        LinkedList<GastoMensual> listasMensuales = listaGastoMensual.getListaGastoMensual();
-        listasMensuales.add(nuevo);
+        LinkedList<GastoMensual> Gasto = listaGastoMensual.getListaGastoMensual();
+        Gasto.add(nuevo);
     }
 }

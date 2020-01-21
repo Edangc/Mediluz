@@ -50,23 +50,25 @@ public class GastoMensual {
     
     public void agregarElectrodomesticos(){
         Scanner lector = new Scanner(System.in);
+        Scanner lector2 = new Scanner(System.in);
         int i = 0;
         int option;
         int horas = 0;
+        String nombre;
         while(true){
             System.out.println("Electrodomesticos agregados: "+i);
             System.out.println("Desea agregar electrodomesticos?");
             System.out.println("1.-Si");
             System.out.println("2.-No");
             option = lector.nextInt();
-            if(i == 2){
-                break;
+            if(option == 2){
+                return;
             }
             switch(option){
                 case 1:
                     Electrodomestico nuevo = new Electrodomestico();
                     System.out.println("Ingrese nombre del electrodomestico");
-                    nuevo.setNombreElectroomestico(lector.nextLine());
+                    nuevo.setNombreElectrodomestico(lector2.nextLine());
                     System.out.println("Ingrese kilowatt-Hora");
                     nuevo.setKilowattHora(lector.nextInt());
                     System.out.println("Ingrese horas usadas en el mes");

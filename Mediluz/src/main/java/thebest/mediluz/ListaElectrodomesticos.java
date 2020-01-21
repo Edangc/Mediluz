@@ -14,8 +14,7 @@ public class ListaElectrodomesticos {
         this.listaElectrodomestico = listaElectrodomestico;
     }
 
-    ListaElectrodomesticos() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public ListaElectrodomesticos(){
     }
 
     public LinkedList<Electrodomestico> getListaElectrodomestico() {
@@ -68,6 +67,6 @@ public class ListaElectrodomesticos {
         Scanner lector = new Scanner(System.in);
         Electrodomestico nuevo = new Electrodomestico();
         System.out.println("Ingrese el electrodomestico");
-        nuevo.setNombreElectroomestico(lector.nextLine());
+        nuevo.setNombreElectrodomestico(lector.nextLine());
     }
 }
