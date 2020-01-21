@@ -88,6 +88,7 @@ public class GastoMensual {
     
     public void verMes(){
         this.electronicosMensuales.verMes();
+        System.out.println("Gasto del mes: $"+this.gastoTotalDelMes);
     }
     
     public void calculoGasto(){

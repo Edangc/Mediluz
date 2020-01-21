@@ -27,7 +27,7 @@ public class Main {
             System.out.println("2.-Visualizar mes");
             System.out.println("3.-Salir");
             option = lector.nextInt();
-            if(option == 4){
+            if(option == 3){
                 break;
             }
             switch(option){

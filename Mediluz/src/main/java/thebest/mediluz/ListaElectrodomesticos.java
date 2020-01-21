@@ -66,11 +66,9 @@ public class ListaElectrodomesticos {
     
     public void verMes(){
         
-        for(int i = 0;this.listaElectrodomestico.get(i)!=this.listaElectrodomestico.getLast();i++){
-        
+        for(int i = 0;i<this.listaElectrodomestico.size();i++){
             Electrodomestico pos = this.listaElectrodomestico.get(i);
-            System.out.println("Nombre: "+pos.getNombreElectrodomestico()+" Gasto: "+pos.getKilowattHora());
-        
+            System.out.println("Nombre: "+pos.getNombreElectrodomestico()+" Gasto: "+pos.getKilowattHora()+" Kw/H");
         }
     }
     

@@ -57,15 +57,15 @@ public class User {
         gasto.add(nuevo);
     }
     public void verMes(){
-        System.out.println("Ingrese mes a buscar");
         Scanner lector = new Scanner(System.in);
-        System.out.println("hola");
+        System.out.println("Ingrese mes a buscar");
         String cadena = lector.nextLine();
         LinkedList<GastoMensual> gasto = listaGastoMensual.getListaGastoMensual();
-        for(int i = 0;gasto.get(i)!=gasto.getLast();i++){
-            
-            if(gasto.get(i).getFecha().equalsIgnoreCase(cadena)){
-                
+        for(int i = 0;i<gasto.size();i++){
+            GastoMensual pos = gasto.get(i);
+            if(pos.getFecha().equalsIgnoreCase(cadena)){
+                pos.verMes();
+                return;
             }
         }
     }
