@@ -40,6 +40,16 @@ public class User {
         nameUser = br.readLine();
     }
     
+    public boolean existeUsuario() throws FileNotFoundException, IOException{
+        File archivo = new File ("src\\bd\\nameUser.txt");
+        FileReader fr = new FileReader(archivo);
+        BufferedReader br = new BufferedReader(fr);
+        if(br.readLine() == null){
+            return false;
+        }
+        else return true;
+    }
+    
     public void cargarInfo() throws FileNotFoundException, IOException{
         
         cargarUsuario();
@@ -72,5 +82,10 @@ public class User {
     
     public void guardarDatos() throws IOException{
         listaGastoMensual.guardarDatos();
+    }
+    
+    public void guardarYSalir() throws IOException{
+        listaGastoMensual.guardarDatos();
+        System.exit(0);
     }
 }
